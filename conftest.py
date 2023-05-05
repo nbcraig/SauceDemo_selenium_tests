@@ -16,4 +16,4 @@ def driver():
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_configure(config):
-    config.option.htmlpath = 'reports/html_reports/'+datetime.now().strftime("%d-%m-%Y %H-%M-%S")+".html"
+    config.option.htmlpath = './reports/html_reports/'+datetime.now().strftime("%d-%m-%Y %H-%M-%S")+".html"

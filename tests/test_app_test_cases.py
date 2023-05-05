@@ -2,7 +2,7 @@ import pytest
 from selenium.common.exceptions import NoSuchElementException
 from pages.home_page import HomePage
 from pages.login_page import LoginPage
-'''
+
 def test_valid_login(driver):
     instance = LoginPage(driver)
     instance.login('standard_user', 'secret_sauce')
@@ -11,7 +11,7 @@ def test_valid_login(driver):
         assert True
     except NoSuchElementException:
         assert False
- 
+
 def test_error_message_on_invalid_login(driver):
     instance = LoginPage(driver)
     instance.login('not_username', 'not_password')
@@ -58,7 +58,7 @@ def test_add_specific_item_to_cart(driver):
     instance.add_specific_item_to_cart('add-to-cart-sauce-labs-onesie')
     cart_titles = instance.cart_titles()
     assert cart_titles == ['Sauce Labs Onesie']
-'''
+
 def test_check_out(driver):
     login_instance = LoginPage(driver)
     instance = HomePage(driver)
